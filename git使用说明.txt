@@ -1,0 +1,5 @@
+1.git status
+2.git add -A
+3.git commit -m "ĞŞ¸ÄĞÅÏ¢"
+4.git pull --rebase origin master
+5.git push origin master
