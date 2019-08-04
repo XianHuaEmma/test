@@ -3,3 +3,6 @@
 3.git commit -m "修改信息"
 4.git pull --rebase origin master
 5.git push origin master
+
+Git的日志信息的配置
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" 
