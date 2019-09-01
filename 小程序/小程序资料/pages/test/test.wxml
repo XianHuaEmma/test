@@ -1,0 +1,80 @@
+<!-- <view>test页</view>
+<view>{{name}}</view>
+<view>密码是：{{pass}}</view> -->
+<!-- <button bindtap="toIndex">跳转到navii</button> -->
+<!-- <navigator hover-class="active" url="../navii/navi">跳转到navii</navigator> -->
+<!-- <button bindtap="say">say hello!</button> -->
+<!-- 条件渲染 -->
+<!-- <view id="item-{{id}}">内容</view>
+
+<button bindtap="show">显示隐藏</button>
+<view wx:if="{{bol}}">条件渲染显示</view> -->
+<!-- <view wx:if="{{id==1}}">第一条</view>
+<view wx:if="{{id>4}}">大于第一条的</view>
+<view wx:if="{{id>7}}">我是7</view> -->
+<!-- <block wx:if="{{false}}">
+	<view>第一个view</view>
+	<view>第二个view</view>
+</block> -->
+<!-- 在view上是不生效->text -->
+<!-- <text hidden="{{true}}">我是一段文本</text> -->
+<!-- <view>{{bol?"正":"反"}}</view> -->
+<!-- <view>{{id*3}}</view> -->
+<!-- 字符串的连接 -->
+<!-- <view>{{"hello "+name}}</view> -->
+<!-- <view wx:for="{{arr}}">项目：{{item}}</view> -->
+<!-- 组合 -->
+<!-- <view wx:for="{{[id,5,4,3,2,1]}}">{{item}}</view> -->
+<!-- 定义一个模板 -->
+<!-- 模板拥有独立作用域 -->
+<!-- <template name="object">
+	<view>第一个对象：{{a}}</view>
+	<view>{{b}}</view>
+</template> -->
+<!-- 使用模板 -->
+<!-- <template is="object" data="{{a:1,b:2,tempname:name}}"></template> -->
+<!-- <template is="object" data="{{...obj1,tempname:name}}"></template> -->
+<!-- <template is="object" data="{{...obj1,b:11}}"></template> -->
+<!-- for详解 -->
+<!-- <view wx:for="{{arr}}" wx:for-index="ind" wx:for-item="itemName">
+	下标是{{ind}}:当前项是{{itemName}}
+</view> -->
+<!-- 行 -->
+<!-- <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+	
+	1*1 = 1
+	2*1=2 2*2=4
+	3*1
+	
+	<view style="display:inline-block; width:50px;" wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
+		<view wx:if="{{j <= i}}">
+			{{i}}*{{j}}={{i*j}}
+		</view>
+	</view>
+</view> -->
+<!-- 事件 -->
+<!-- <view id="outter" style="border:1px solid red;" bindtap="outterTap">
+	outter view
+	<view id="middle" style="border:1px solid green;" bindtap="middleTap">
+		middle view
+		<view id="inner" data-src="一些路径" bindtap="innerTap">
+			inner view
+		</view>
+	</view>
+</view> -->
+<!-- 引入-import -->
+<!-- <import src="iteml.wxml" />
+<import src="c.wxml" />
+<template is="item" data="{{name:'tangcaiye'}}" />
+<template is="c" data="{{pass:'12345'}}" /> -->
+<!-- 引入-include -->
+<!-- <include src="iteml.wxml" />
+<template is="item" data="{{name:'tangcaiye'}}" /> -->
+<view class="rpx"></view>
+
+
+
+
+
+
+

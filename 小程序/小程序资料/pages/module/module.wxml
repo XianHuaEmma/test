@@ -1,0 +1,113 @@
+<!-- <view class="flex-wrap">
+	<view class="a">a</view>
+	<view class="b">b</view>
+	<view class="c">c</view>
+</view> -->
+<!-- <view class="wrap">
+	<view class="a">a</view>
+	<view class="b">b</view>
+	<view class="c">c</view>
+</view> -->
+<!-- scroll-view -->
+<!-- <scroll-view class="wrap" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower" upper-threshold="100" lower-threshold="100" scroll-x="true" scroll-into-view="{{toView}}" bindscroll="scroll" scroll-y="true">
+	<view id="a" class="a">a</view>
+	<view id="b" class="b">b</view>
+	<view id="c" class="c">c</view>
+</scroll-view>
+<button bindtap="tapChange">切换</button> -->
+<!-- swipter -->
+<!-- <swiper indicator-dots="true" autoplay="{{autopaly}}" interval="{{inter}}" duration="500" current="2" bindchange="swiperChange">
+	<block wx:for="{{imgUrls}}">
+	<swiper-item>
+		<image src="{{item}}" width="355" height="150" />
+		我是文字
+	</swiper-item>
+	</block>
+</swiper>
+<slider bindchange="intervalChange" show-value min="2000" max="5000" />
+<button bindtap="changeAntoplay">切换autoplay</button> -->
+<!-- icon -->
+<!-- <icon type="success" size="100" color="red" /> -->
+<!-- <view>
+	<block wx:for="{{iconType}}">
+		<icon type="{{item}}" size="40" />
+	</block>
+</view> -->
+<!-- text -->
+<!-- <view>我是一段文字啊哈哈哈哈哈</view>
+<text>我是text里的一段文字哈哈哈哈哈</text> -->
+<!-- progress -->
+<!-- <progress percent="{{progress}}" show-info stroke-width="20" color="red" /> -->
+
+<!-- 表单 -->
+<!-- <button bindtap="changeDisabled">启用按钮</button> -->
+<!-- <form bindsubmit="subFn" bindreset="resetFn">
+	<input type="text" name="txtName" placeholder="请输入您的用户名" placeholder-class="outher-placeholder" auto-focus="true" bindinput="inputFn" bindfocus="focusFn" bindblur="blurFn" />
+	
+	<checkbox-group bindchange="checkChange">
+		<label wx:for="{{country}}">
+			<checkbox value="{{item.name}}" checked="{{item.checked}}" />
+			{{item.value}}
+		</label>
+	</checkbox-group>
+	
+	<input type="number" password="true" />
+	
+	<view class="section_title">选择城市：</view>
+	<picker bindchange="bindPickerChange" value="{{index}}" range="{{citys}}">
+		<view>当前选择：{{citys[index]}}</view>
+	</picker>
+	<view class="section_title">选择时间：</view>
+	<picker value="{{time}}" start="09:01" end="21:01" mode="time" bindchange="bindTimeChange">
+		<view>当前选择：{{time}}</view>
+	</picker>
+	<view class="section_title">选择日期：</view>
+	<picker mode="date" value="{{date}}" start="2015" end="2017" fields="month" bindchange="bindDateChange">
+		<view>当前选择：{{date}}</view>
+	</picker>
+	
+	<radio-group bindchange="bindRadioChange">
+		<label wx:for="{{country}}">
+			<checkbox value="{{item.name}}" checked="{{item.checked}}" />
+			{{item.value}}
+		</label>
+	</radio-group>
+	
+	<slider show-value min="0" max="50" step="5" value="10" bindchange="bindSliderChange" />
+	
+	<switch checked="true" type="checkbox" bindchange="bindSwitchChange" />
+	
+	<textarea class="text" placeholder="请输入留言" auto-height placeholder-class="textarea_placeholder" bindlinechange="bindLineChange" />
+	<button size="mini" type="warn" plain="true" disabled="{{disabledBol}}" loading="true" hover-class="other-button-hover" formType="submit">按钮</button>
+	<button size="mini" formType="reset">重置</button>
+</form>  -->
+
+ <!-- <button bindtap="showAction">显示操作菜单</button>
+<button bindtap="showModal">显示模态弹窗</button>
+<button bindtap="showToast">显示消息提示框</button>  -->
+<!-- <navigator url="http://www.baidu.com">跳转到百度首页</navigator> -->
+<!--<navigator url="../logs/logs?id=12345&user=tangcaiye" hover-class="nav_hover">跳转到logs页面</navigator>
+<button bindtap="navigateTo">跳转到logs页面</button>-->
+<!-- <audio src="{{src}}" poster="{{poster}}" name="{{name}}" author="{{author}}" id="myAudio" controls></audio>
+<button bindtap="audioPlay">播放</button>
+<button bindtap="audioPause">暂停</button>
+<button bindtap="audio50">设置当前的播放时间为50秒</button> -->
+<!-- <view class="section_title">原图</view>
+<image src="{{imageSrc}}"></image>
+<view wx:for="{{imageArray}}">
+	<view>{{item.text}}</view>
+	<image style="width:400rpx; height:400rpx; background-color:green" mode="{{item.mode}}" src="{{imageSrc}}"></image>
+</view> -->
+<!-- <view class="section_title">scaleToFill：不保持纵横比缩放图片，使图片完全适应</view>
+<image style="width:400rpx; height:400rpx; background-color:#333" mode="aspectFit" src="{{imageSrc}}"></image> -->
+<!-- <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" danmu-btn enable-danmu controls></video> -->
+<!-- 地图 -->
+<!-- <map longitude="113.346410" latitude="23.175200" markers="{{markers}}" style="width: 375px; height: 200px;"></map>
+<button bindtap="getPos">获取我的位置</button> -->
+<!-- canvas -->
+<canvas style="width:100%;height:100%; background-color:#ccc;" canvas-id="firstCanvas" bindtouchstart="touchstartFn" bindtouchmove="touchmoveFn" bindtouchend="touchendFn"></canvas>
+
+
+
+
+

@@ -1,0 +1,3 @@
+<template name="c">
+	<text>我是c.wxml里的{{pass}}</text>
+</template>
