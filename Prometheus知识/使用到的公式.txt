@@ -1,0 +1,2 @@
+(1-(sum(increase(wmi_cpu_time_total{mode="idle"}[1m])) by(instance))/(sum(increase(wmi_cpu_time_total[1m]))by (instance)))*100
+
