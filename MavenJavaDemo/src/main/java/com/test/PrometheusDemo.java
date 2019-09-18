@@ -17,7 +17,7 @@ public class PrometheusDemo {
 	 public static void main(String[] args){
 	        try {
 	            System.out.println("start...");
-	            new HTTPServer(1234);
+	            new HTTPServer(5678);
 	            submitData();
 	        } catch (Exception e) {
 	            e.printStackTrace();
@@ -61,6 +61,11 @@ public class PrometheusDemo {
 	                .help("测试")
 	                .register(registry); 
 	        
+	        Gauge gaugeMicro= Gauge.build()
+	        		.name("MicroService_static")
+	        		.labelNames("name")
+	        		.help("微服务的状态")
+	        		.register(registry);
 	        
 	        
 	 
@@ -80,6 +85,9 @@ public class PrometheusDemo {
 					gaugeRandNum.labels("请求时间").set(count);
 					gaugePushGate.labels("模拟Push请求响应时间").set(count+1);
 					CountPush.labels("PushGate计量").inc(count);
+					gaugeMicro.labels("XbotService").set(1);
+					gaugeMicro.labels("XbotWebsite").set(1);
+					gaugeMicro.labels("XbotTestService").set(1);
 //					prometheusPush.push(gaugePushGate,"sp-getway");
 					prometheusPush.push(registry,"my_push_Job");
 					

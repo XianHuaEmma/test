@@ -1,2 +1,16 @@
 (1-(sum(increase(wmi_cpu_time_total{mode="idle"}[1m])) by(instance))/(sum(increase(wmi_cpu_time_total[1m]))by (instance)))*100
 
+node_cpu{mode="idle"}[1m]:空闲时间，1分钟之内的时间，返回的是Countter类型
+incraese（）针对counter持续增长类型，截取一段增量取值
+sum()：将多个核进行相加，单独看一个核意义不大，
+by（instance）：sum会将所有服务器的CPU全都相加，按指定的方式进行拆分这里用instance（机器名字）
+
+sum(increase(node_cpu{mode="idle"}[1m]))by(instance)
+
+针对Counter类型：
+rate(xxx_{}[1m]):1分钟的增量中，每秒的增量率
+
+
+
+
+
