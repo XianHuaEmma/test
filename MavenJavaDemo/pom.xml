@@ -44,6 +44,27 @@
             <artifactId>simpleclient_pushgateway</artifactId>
             <version>0.6.0</version>
         </dependency>
+        
+       <!-- httpserver exposition --> 
+       <dependency>
+    		<groupId>com.sun.net.httpserver</groupId>
+    		<artifactId>http</artifactId>
+    		<version>20070405</version>
+    		<scope>test</scope>
+		</dependency>
+		
+		<!-- org.spring exposition -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-context</artifactId>
+    		<version>5.1.9.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+   			 <groupId>javax.annotation</groupId>
+    		<artifactId>javax.annotation-api</artifactId>
+    		<version>1.3.2</version>
+		</dependency>
 
   </dependencies>
 </project>
