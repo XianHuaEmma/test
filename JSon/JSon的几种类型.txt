@@ -1,0 +1,11 @@
+JSON对象的三种形式：
+
+{}双括号表示对象：String weather
+JSONObject jsonObject = JSONObject.fromObject(weather);
+
+[]中括号表示数组
+JSONArray jsonArray = jsonObject.getJSONArray("HeWeather6");
+
+解析方式：
+关于json处理的包有好几个，比如jackson、Gson、Fastjson。
+Gson是谷歌做的，功能强大；Fastjson是阿里巴巴做的，性能更快
