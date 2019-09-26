@@ -1,9 +1,13 @@
 package com.test;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.URI;
 
+import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpContext;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -14,7 +18,7 @@ public class TestHTTPServer {
 				public static void main(String[] args) {
 					try{
 						
-						HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);//监听8080端口，第二个参数小于等于0使用默认值，表示可同时接受请求的个数
+						HttpServer server = HttpServer.create(new InetSocketAddress(8080), 20);//监听8080端口，第二个参数小于等于0使用默认值，表示可同时接受请求的个数
 //						HttpServer server = HttpServer.create();
 //						server.bind(new InetSocketAddress(8080), 0);
 						server.createContext("/start", new StartHandler());
@@ -47,6 +51,8 @@ public class TestHTTPServer {
 						System.out.println("getResponseCode:" + exchange.getResponseCode());//返回已经设置的响应code，还没设置返回-1
 						
 						HttpContext context = exchange.getHttpContext();
+					   Headers responseHeaders = exchange.getResponseHeaders();
+			            responseHeaders.set("Content-Type", "text/json;charset=utf-8");
 						System.out.println("context.getPath:" + context.getPath());
 						System.out.println("context.toString:" + context.toString());
 						System.out.println("context.getAttributes：" + context.getAttributes());
@@ -76,6 +82,17 @@ public class TestHTTPServer {
 						System.out.println("uri.getSchemeSpecificPart:" + uri.getSchemeSpecificPart());
 						System.out.println("uri.getUserInfo:" + uri.getUserInfo());
 						System.out.println("uri.getPort:" + uri.getPort());
+						
+						
+						String response = "this is server";
+
+		                exchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, response.getBytes("UTF-8").length);
+
+		                OutputStream responseBody = exchange.getResponseBody();
+		                OutputStreamWriter writer = new OutputStreamWriter(responseBody, "UTF-8");
+		                writer.write(response);
+		                writer.close();
+		                responseBody.close();
 						
 						System.out.println("getRequestBody:" + exchange.getRequestBody());
 						System.out.println("getResponseBody:" + exchange.getResponseBody());
