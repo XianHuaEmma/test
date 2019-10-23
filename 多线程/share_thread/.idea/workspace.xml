@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccfd6d7f-ff90-416e-9696-9f316ba718a1" name="Default Changelist" comment="" />
+    <list default="true" id="3b70d8fe-5a02-4443-953f-56bae14c3496" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -18,15 +15,23 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1ScLHlQpnsqa9GuBsRqeqNVmiNG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1ScMqQwIs9AKoqlavpWrNQGgKG8" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/liubingan/productandcomsumer" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liubingan.synch" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProject\share_thread\src\com\liubingan\productandcomsumer" />
+      <recent name="D:\IdeaProject\share_thread\src\com\liubingan\lazy" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -40,13 +45,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReentranlockTest">
+  <component name="RunManager" selected="Application.MyMain">
     <configuration name="DeadLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.DeadLock" />
-      <module name="TestThread" />
+      <option name="MAIN_CLASS_NAME" value="com.liubingan.synch.DeadLock" />
+      <module name="share_thread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.*" />
+          <option name="PATTERN" value="com.liubingan.synch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,11 +60,11 @@
       </method>
     </configuration>
     <configuration name="LazyMan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.LazyMan" />
-      <module name="TestThread" />
+      <option name="MAIN_CLASS_NAME" value="com.liubingan.lazy.LazyMan" />
+      <module name="share_thread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.*" />
+          <option name="PATTERN" value="com.liubingan.lazy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,12 +72,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReentranlockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.ReentranlockTest" />
-      <module name="TestThread" />
+    <configuration name="MyMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liubingan.productandcomsumer.MyMain" />
+      <module name="share_thread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.*" />
+          <option name="PATTERN" value="com.liubingan.productandcomsumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReentranLockResource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liubingan.synch.ReentranLockResource" />
+      <module name="share_thread" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liubingan.synch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,24 +99,11 @@
       </method>
     </configuration>
     <configuration name="SloveDeadLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.SloveDeadLock" />
-      <module name="TestThread" />
+      <option name="MAIN_CLASS_NAME" value="com.liubingan.synch.SloveDeadLock" />
+      <module name="share_thread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SynchronizeMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.SynchronizeMethod" />
-      <module name="TestThread" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
+          <option name="PATTERN" value="com.liubingan.synch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReentranlockTest" />
+        <item itemvalue="Application.MyMain" />
         <item itemvalue="Application.LazyMan" />
         <item itemvalue="Application.SloveDeadLock" />
         <item itemvalue="Application.DeadLock" />
-        <item itemvalue="Application.SynchronizeMethod" />
+        <item itemvalue="Application.ReentranLockResource" />
       </list>
     </recent_temporary>
   </component>
@@ -121,32 +126,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ccfd6d7f-ff90-416e-9696-9f316ba718a1" name="Default Changelist" comment="" />
-      <created>1571330477870</created>
+      <changelist id="3b70d8fe-5a02-4443-953f-56bae14c3496" name="Default Changelist" comment="" />
+      <created>1571858620885</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571330477870</updated>
+      <updated>1571858620885</updated>
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
