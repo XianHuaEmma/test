@@ -9,7 +9,7 @@
     <style>
         body {
             padding: 0;
-            margin: 0;
+            margin: 30px;
         }
 
 
@@ -36,7 +36,13 @@
         .fr {
             float: right;
         }
-
+        #chatTitle {
+            width: 590px;
+            height: 50px;
+            margin: 0 auto;  /* 0 auto;*/
+            padding: 5px;
+            background: rgb(156, 156, 173);
+        }
         #chatRoom {
             width: 590px;
             height: 490px;
@@ -140,12 +146,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8fe3",endCo
 </head>
 
 <body>
-    <div id="chatRoom">
-        <!-- 聊天内容展示界面 -->
-         <!-- @img-event="browseImg" -->
-        <show-chat  :bubble="msgArr"></show-chat>
-        <!-- 输入或发送信息 -->
-        <send-msg @text-data="addMsg" @text-data1="addMsg"></send-msg>
+    <div>
+        <div id="chatTitle">
+            <img src="chat.jpg" width='50' height='50' style="float:left;" >
+            <h3>网管现代化问答系统</h3>
+        </div>
+        <div id="chatRoom">
+            <!-- 聊天内容展示界面 -->
+            <!-- @img-event="browseImg" -->
+            <show-chat  :bubble="msgArr"></show-chat>
+            <!-- 输入或发送信息 -->
+            <send-msg @text-data="addMsg" @text-data1="addMsg"></send-msg>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>

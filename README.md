@@ -31,3 +31,7 @@ https://blog.csdn.net/a18827547638/article/details/80777366
 vue组件的使用父子组件
 
 https://blog.csdn.net/superlover_/article/details/78128510
+
+vue使用图片插件
+
+https://blog.csdn.net/qq_38214630/article/details/83821855
