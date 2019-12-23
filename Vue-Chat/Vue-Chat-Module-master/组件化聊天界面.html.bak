@@ -9,7 +9,7 @@
     <style>
         body {
             padding: 0;
-            margin: 0;
+            margin: 30px;
         }
 
 
@@ -36,7 +36,13 @@
         .fr {
             float: right;
         }
-
+        #chatTitle {
+            width: 590px;
+            height: 50px;
+            margin: 0 auto;  /* 0 auto;*/
+            padding: 5px;
+            background: rgb(156, 156, 173);
+        }
         #chatRoom {
             width: 590px;
             height: 490px;
@@ -123,15 +129,35 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8fe3",endCo
             border-right: 4px solid #b2b2b2;
             border-left: 4px solid transparent;
         }
+        img {    
+            transform: scale(1);          /*图片原始大小1倍*/
+            transition: all ease 0.5s; 
+        }  /*图片放大所用时间*/
+
+
+        img.active {     
+            transform: scale(2);          /*图片需要放大3倍*/ /*position: absolute;*/
+            position: relative;
+            top: 0px; left: 15px;           /*是相对于前面的容器定位的，此处要放大的图片，不能使用position：relative；以及float，否则会导致z-index无效*/
+            z-index: 100; 
+        } 
+
     </style>
 </head>
 
 <body>
-    <div id="chatRoom">
-        <!-- 聊天内容展示界面 -->
-        <show-chat :bubble="msgArr"></show-chat>
-        <!-- 输入或发送信息 -->
-        <send-msg @text-data="addMsg" @text-data1="addMsg"></send-msg>
+    <div>
+        <div id="chatTitle">
+            <img src="chat.jpg" width='50' height='50' style="float:left;" >
+            <h3>网管现代化问答系统</h3>
+        </div>
+        <div id="chatRoom">
+            <!-- 聊天内容展示界面 -->
+            <!-- @img-event="browseImg" -->
+            <show-chat  :bubble="msgArr"></show-chat>
+            <!-- 输入或发送信息 -->
+            <send-msg @text-data="addMsg" @text-data1="addMsg"></send-msg>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
@@ -142,13 +168,32 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8fe3",endCo
             template: `
                         <div class="msgLine">
                             <div  class="msg" v-if="index.msg":class="{fr:index.local}">{{index.msg}}<div :class="index.local?'arrowRight':'arrowLeft'"></div></div>
-							<div  class="msg" v-else-if="index.showimg":class="{fr:index.local}" v-html="index.url"><div :class="index.local?'arrowRight':'arrowLeft'"></div></div>
+							<div  class="msg" v-else-if="index.showurl":class="{fr:index.local}" v-html="index.url"><div :class="index.local?'arrowRight':'arrowLeft'"></div></div>
 							<div  class="msg" v-else-if="index.showbtn":class="{fr:index.local}">
 							<button type="button">点我!</button>
 							<div :class="index.local?'arrowRight':'arrowLeft'"></div></div>
-
+                            <div  class="msg" v-else-if="index.showimg":class="{fr:index.local}">
+                                <img :class="{'active':isChoose}" src="http://www.baidu.com/img/bd_logo.png" style="width: 100px" @click="imgScc">
+							<div :class="index.local?'arrowRight':'arrowLeft'"></div></div>
                         </div>
-                    `
+                    `,
+            data() {
+                return {
+                    isChoose:false
+                }
+                
+            },
+            methods:{
+                imgScc:function () {                     
+                    this.isChoose = !this.isChoose 
+                    // :class="{'active':isChoose}"
+                    console.log('isChoose')
+                    console.log(this.isChoose)
+                    
+                    // this.$emit('father-event')
+                    
+                }
+            }
         }
         // 展示聊天界面组件
         const ShowChat = {
@@ -157,6 +202,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8fe3",endCo
                     <div class="showMsg" id="showMsg">
                             <chat-msg v-for="index in bubble" :key="index.id"  :index="index"></chat-msg>
                     </div>`,
+            methods: {
+                // @father-event="getChildEvent" 
+                // getChildEvent() {
+                //     this.$emit("img-event")
+                // }
+            },
             components: {
                 ChatMsg
             }
@@ -199,20 +250,27 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8fe3",endCo
         }
         // 左边的消息为电脑：left
         // 右边的消息为我：right
+        // <img :class="{'active':isChoose}" src="http://www.baidu.com/img/bd_logo.png" style="width: 100px" @click="imgScc">
         new Vue({
             el: "#chatRoom",
             data: {
                 msgArr: [
                     { id: 0, msg: "大家好", local: true },
                     { id: 1, msg: "好", local: false },
-					{ id: 2, showimg: true, local: false , url:'<a href="www.badu.com">链接</a>'},
-					{ id: 4, showbtn: true, local: false }]
+					{ id: 2, showurl: true, local: false , url:'<a href="www.badu.com">链接</a>'},
+                    { id: 6, showurl: true, local: false , url:'<img :class="{'+"'active'"+':isChoose}" src="http://www.baidu.com/img/bd_logo.png" style="width: 100px" @click="imgScc"></img>'},
+					{ id: 4, showbtn: true, local: false },
+                    { id: 5, showimg: true, local: false }],
+                    // isChoose:false
             },
             methods: {
                 addMsg(msg) {
                     this.msgArr.push(msg)
                     console.log(this.msgArr);
                 },
+                // browseImg() {
+                //     // this.isChoose = !this.isChoose
+                // }
             },
             components: {
                 ShowChat,

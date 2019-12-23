@@ -35,3 +35,13 @@ https://blog.csdn.net/superlover_/article/details/78128510
 vue使用图片插件
 
 https://blog.csdn.net/qq_38214630/article/details/83821855
+
+意图识别相关
+
+https://blog.csdn.net/shuibuzhaodeshiren/article/details/85259289
+
+https://blog.csdn.net/android_ruben/article/details/78047311
+
+https://blog.csdn.net/qq_25439417/article/details/82589918
+
+https://www.jianshu.com/p/b2eeb4f9a1c6
