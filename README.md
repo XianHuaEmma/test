@@ -45,3 +45,26 @@ https://blog.csdn.net/android_ruben/article/details/78047311
 https://blog.csdn.net/qq_25439417/article/details/82589918
 
 https://www.jianshu.com/p/b2eeb4f9a1c6
+
+
+
+逻辑表达式的解析
+
+https://cloud.tencent.com/developer/ask/171101
+
+https://www.cnblogs.com/lknny/p/7509953.html
+
+https://blog.csdn.net/Zolewit/article/details/98496744
+
+https://studygolang.com/articles/25949
+
+  单目乘除为关系，逻辑三目后赋值。 
+
+单目：单目运算符+ –(负数) ++ -- 等 
+乘除：算数单目运算符* / % + - 
+为：位移单目运算符<< >> 
+关系：关系单目运算符> < >= <= == != 
+逻辑：逻辑单目运算符&& || & | ^ 
+三目：三目单目运算符A > B ? X : Y 
+后：无意义，仅仅为了凑字数 
+赋值：赋值=  
