@@ -8,6 +8,14 @@ vue笔记：
 
 https://blog.csdn.net/qq_42068550/article/category/8896245/2
 
+传递多个参数：
+
+https://blog.csdn.net/weixin_40297452/article/details/90704936
+
+https://segmentfault.com/q/1010000012030944
+
+https://www.jb51.net/article/127924.htm
+
 ladam表达式：
 
 https://blog.csdn.net/zxm1306192988/article/details/73744378
