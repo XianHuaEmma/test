@@ -31,8 +31,29 @@
     </style>
 </head>
 <body>
+    <script>
+        function parse(){
+            var json = [{组网:{dd:'SB',AA:'东东',re1:123}},{交付:{cccc:'dd',lk:'1qw'}}];
+            var list = []
+            for(var i=0,l=json.length;i<l;i++){
+                
+                for(var key in json[i]){
+                
+                    // console.log(key+':'+json[i][key]);
+                    console.log(key+':')
+                    var innerJson = json[i][key]
+                    for(var val in innerJson){ // Json的遍历方式
+                        console.log('值为:'+val)
+                    }
+                
+                }
+            
+            }
+
+        }
+    </script>
     <div>
-        <div class="region">
+        <div class="region" onclick="parse()">
             <span class="region-tips">领域</span>span>
         </div>
         <div class="region-button">
