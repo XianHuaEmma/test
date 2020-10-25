@@ -1,0 +1,27 @@
+package com.xianhua.testmybatis.mapper;
+
+import com.xianhua.testmybatis.bean.Book;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * @Author：liubingan
+ * @date: 2020
+ * @描述：
+ */
+
+@Mapper
+@Repository
+public interface BookMapper {
+    int addBook(Book book);
+
+    int deleteBookById(Integer id);
+
+    int updateBookById(Book book);
+
+    Book getBookById(Integer id);
+
+    List<Book> getAllBooks();
+}
